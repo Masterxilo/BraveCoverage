@@ -9,6 +9,7 @@ public:
 
     void setAValue(int A);
     void setBValue(int B);
+    void setBValue2(int B);
     int executeSum(void);
 
 private:
