@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Masterxilo/BraveCoverage.svg?branch=master)](https://travis-ci.com/Masterxilo/BraveCoverage)
+
 adapted from:
 * https://dr-kino.github.io/2019/12/22/test-coverage-using-gtest-gcov-and-lcov/
 * https://github.com/dr-kino/BraveCoverage
