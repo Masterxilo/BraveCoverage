@@ -1,18 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-# install lcov
-if ! which lcov ; then
-    sudo apt-get install -y lcov
-fi
-
-# install gmock
-if ! ls /usr/include/gmock ; then
-
-    sudo apt-get install -y libboost-all-dev libgmock-dev
-    find /usr/lib/ -name '*gmock*'
-    find /usr/include/gmock
-fi
 
 pushd ./test
 

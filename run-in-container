@@ -1,0 +1,15 @@
+#!/bin/bash
+set -euo pipefail
+
+IMAGE='brave-coverage:latest'
+docker build -t $IMAGE .
+
+# Extract ./test/build files from container image:
+#docker cp BraveCoverage:
+id=$(docker create $IMAGE)
+rm -rf ./test/build || true
+docker cp $id:/app/test/build ./test/build
+docker rm -v $id
+
+echo "produced:"
+find ./test/build

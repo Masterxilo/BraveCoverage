@@ -1,0 +1,41 @@
+#!/bin/bash
+set -euo pipefail
+
+
+if ! which sudo ; then
+    apt update
+    apt install -y sudo
+fi
+
+if ! which g++ ; then
+    sudo apt update
+    sudo apt install -y g++
+fi
+
+if ! which cmake ; then
+    sudo apt-get install -y cmake
+fi
+
+# https://www.eriksmistad.no/getting-started-with-google-test-on-ubuntu/
+if ! test -d /usr/src/gtest ; then
+    sudo apt-get install -y libgtest-dev
+
+    echo "installed gtest:"
+    find /usr/lib/ -name '*gtest*'
+fi
+
+# install lcov
+if ! which lcov ; then
+    sudo apt-get install -y lcov
+fi
+
+# install gmock
+if ! ls /usr/include/gmock ; then
+    # libboost-all-dev is needed to build gmock... but should not be needed to install & use it... takes forever to install...
+    #sudo apt-get install -y libboost-all-dev libgmock-dev
+    sudo apt-get install -y libgmock-dev
+
+    echo "installed gmock:"
+    find /usr/lib/ -name '*gmock*'
+    find /usr/include/gmock
+fi
