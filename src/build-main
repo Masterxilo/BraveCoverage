@@ -1,0 +1,12 @@
+#!/bin/bash
+set -euo pipefail
+
+./configure
+
+rm -rf build || true
+
+mkdir -p build && cd build
+
+cmake ..
+
+make

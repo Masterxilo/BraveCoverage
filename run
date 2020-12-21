@@ -4,7 +4,7 @@ set -euo pipefail
 ./configure
 
 ./test/test
-./src/build
+./src/build-main
 
 ./build/BraveCoverage --value_a 1 --value_b 10 --sum |& tee output.txt
 grep 11 < output.txt

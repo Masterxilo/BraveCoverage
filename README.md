@@ -10,7 +10,7 @@ Code coverage startup for C++ project using GCov and LCov
 # Build Application
 
 ```bash
-./src/build
+./src/build-main
 ```
 
 # Build Test/Coverage
