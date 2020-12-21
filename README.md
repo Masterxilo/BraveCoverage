@@ -1,3 +1,7 @@
+adapted from:
+* https://dr-kino.github.io/2019/12/22/test-coverage-using-gtest-gcov-and-lcov/
+* https://github.com/dr-kino/BraveCoverage
+
 # BraveCorage
 Code coverage startup for C++ project using GCov and LCov
 
