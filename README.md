@@ -9,27 +9,19 @@ Code coverage startup for C++ project using GCov and LCov
 
 # Build Application
 
-mkdir build && cd build
-
-cmake ..
-
-make
+```bash
+./src/build
+```
 
 # Build Test/Coverage 
 
-cd test && mkdir build && cd build
-
-cmake ..
-
-make init
-
-make gcov
-
-make lcov
+```bash
+./src/test
+```
 
 # Software usage
 
-./BraveCoverage --help
+./build/BraveCoverage --help
 
   --help            produce help message
 
@@ -38,6 +30,8 @@ make lcov
   --value_b arg     set value b
 
   --sum             execute sum operation
+
+./build/BraveCoverage --value_a 1 --value_b 10 --sum
 
 # Test Results
 

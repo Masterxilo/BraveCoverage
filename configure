@@ -32,8 +32,9 @@ fi
 # install gmock
 if ! ls /usr/include/gmock ; then
     # libboost-all-dev is needed to build gmock... but should not be needed to install & use it... takes forever to install...
-    #sudo apt-get install -y libboost-all-dev libgmock-dev
-    sudo apt-get install -y libgmock-dev
+    #but boost is required by main build... (find_package(Boost)
+    sudo apt-get install -y libboost-all-dev libgmock-dev
+    #sudo apt-get install -y libgmock-dev
 
     echo "installed gmock:"
     find /usr/lib/ -name '*gmock*'
