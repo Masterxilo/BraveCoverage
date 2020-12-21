@@ -88,7 +88,7 @@ enable_testing()
 
 add_test(output_test ${CMAKE_CURRENT_BINARY_DIR}/TestBraveCoverage)
 
-# link Boost libraries to the new target
+# link libraries to target
 target_link_libraries(TestBraveCoverage gtest)
 target_link_libraries(TestBraveCoverage gmock)
 target_link_libraries(TestBraveCoverage pthread)

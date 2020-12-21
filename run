@@ -2,8 +2,9 @@
 set -euo pipefail
 
 ./configure
+
 ./test/test
 ./src/build
 
-
-./build/BraveCoverage --value_a 1 --value_b 10 --sum
+./build/BraveCoverage --value_a 1 --value_b 10 --sum |& tee output.txt
+grep 11 < output.txt
