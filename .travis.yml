@@ -10,5 +10,6 @@ language: cpp
 services:
   - docker
 
-build:
+# build script
+script:
   - docker build .
